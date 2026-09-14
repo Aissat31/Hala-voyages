@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="هالة للسياحة والأسفار والعمرة — رحلات مباشرة وبرامج عمرة من وهران">
-  <meta name="theme-color" content="#474666">
+  <meta name="description" content="هالة للسياحة والأسفار والعمرة — رحلات مباشرة وعروض عمرة، حاسبة تكلفة تفاعلية، دليل المزارات الدينية، ونصيحة يومية للمعتمر مع أذكار وسنن الحرمين">
+  <meta name="theme-color" content="#132733">
   <title>هالة | للسياحة والأسفار والعمرة</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +14,7 @@
 <body>
 <div class="topbar"><div class="container topbar-inner">
   <span>✦ أهلاً بكم في هالة للسياحة والأسفار</span>
+  <a href="#dailyTip" class="topbar-tip-link" id="topbarTipLink">💡 <strong>نصيحة اليوم:</strong> <span id="topbarTipTitle">أذكار الطواف وما بين الركنين</span> <span>↗</span></a>
   <span>رحلتكم تبدأ بثقة</span>
 </div></div>
 
@@ -26,8 +27,12 @@
     <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة"><i></i><i></i><i></i></button>
     <nav class="nav-links" id="navLinks">
       <a class="active" href="#home">الرئيسية</a>
+      <a href="#dailyTip">نصيحة اليوم</a>
       <a href="#offers">العمرة</a>
       <a href="#october-prices">أسعار أكتوبر</a>
+      <a href="#calculator">حاسبة التكلفة</a>
+      <a href="#checklist">حقيبة المعتمر</a>
+      <a href="#landmarks">المزارات الدينية</a>
       <a href="#services">خدماتنا</a>
       <a href="#why">لماذا هالة؟</a>
       <a href="#contact">تواصل معنا</a>
@@ -74,6 +79,111 @@
   </div></div>
 </section>
 
+<!-- ================= قسم نصيحة اليوم للمعتمر ================= -->
+<section class="daily-tip-section" id="dailyTip">
+  <div class="container">
+    <div class="daily-tip-card reveal" id="dailyTipMainCard">
+      <div class="tip-card-accent"></div>
+      
+      <!-- الرأس: تصنيف النصيحة والتاريخ -->
+      <div class="tip-header">
+        <div class="tip-tag-row">
+          <span class="tip-sparkle-pill">
+            <span class="sparkle-pulse"></span>
+            <span>نصيحة اليوم للمعتمر</span>
+          </span>
+          <span class="tip-calendar-date" id="tipCalendarDate">الإثنين 14 سبتمبر 2026</span>
+          <span class="tip-category-badge" id="tipCatBadge">أذكار وسنن الطواف</span>
+        </div>
+
+        <div class="tip-header-actions">
+          <button class="btn-open-sidebar" id="btnOpenDrawerFromSection" title="فتح دليل النصائح الجانبي">
+            <span>📚 فتح الدليل الجانبي</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- الجسم الرئيسي للنصيحة -->
+      <div class="tip-body">
+        <div class="tip-icon-pillar" id="tipMainIcon">🕋</div>
+
+        <div class="tip-main-details">
+          <h2 class="tip-title" id="tipTitle">أذكار الطواف وما بين الركنين</h2>
+
+          <!-- صندوق الأذكار والآيات القرآنية -->
+          <div class="tip-athkar-box" id="tipAthkarBox">
+            <span class="athkar-bracket">«</span>
+            <p class="athkar-text" id="tipAthkarText">رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ</p>
+            <span class="athkar-bracket">»</span>
+          </div>
+
+          <!-- الشرح والتوجيه النبوي -->
+          <p class="tip-explanation" id="tipExplanation">
+            يبدأ الطواف من محاذاة الحجر الأسود بالتكبير «الله أكبر»، وليس للطواف دعاء مخصوص لكل شوط، بل يدعو المعتمر بما شاء من خيري الدنيا والآخرة، ويستحب استحباباً مؤكداً قول هذا الذكر المأثور بين الركن اليماني والحجر الأسود في كل شوط.
+          </p>
+
+          <!-- التنبيه الذهبي الفقهي والإرشادي -->
+          <div class="tip-golden-box">
+            <div class="golden-icon">✨</div>
+            <div class="golden-content">
+              <strong>التوجيه الذهبي للمعتمر:</strong>
+              <span id="tipGoldenAdvice">الطواف صلاة فليكن بخضوع وسكينة، وتجنب التدافع عند الحجر الأسود فالإشارة تكفي شرعاً دون ارتكاب محظور إيذاء المسلمين.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- شريط التحكم والتنقل والمشاركة -->
+      <div class="tip-footer">
+        <div class="tip-pager-controls">
+          <button class="btn-tip-arrow" id="btnPrevTip" title="النصيحة السابقة" aria-label="النصيحة السابقة">
+            <span>←</span> السابق
+          </button>
+          <div class="tip-counter-chip" id="tipCounterText">نصيحة 2 من 10</div>
+          <button class="btn-tip-arrow" id="btnNextTip" title="النصيحة التالية" aria-label="النصيحة التالية">
+            التالي <span>→</span>
+          </button>
+          <button class="btn-tip-random" id="btnRandomTip" title="عرض نصيحة عشوائية">
+            🎲 نصيحة عشوائية
+          </button>
+        </div>
+
+        <div class="tip-utility-controls">
+          <button class="btn-tip-util" id="btnAudioTip" title="الاستماع للنصيحة صوتياً">
+            <span id="audioTipIcon">🔊</span>
+            <span id="audioTipLabel">استمع للنصيحة</span>
+          </button>
+          <button class="btn-tip-util" id="btnCopyTip" title="نسخ نص النصيحة والذكر">
+            <span id="copyTipIcon">📋</span>
+            <span id="copyTipLabel">نسخ</span>
+          </button>
+          <button class="btn-tip-util" id="btnFavTip" title="حفظ في قائمة المفضلة">
+            <span id="favTipIcon">🤍</span>
+            <span id="favTipLabel">المفضلة</span>
+          </button>
+          <button class="btn-tip-util gold-highlight" id="btnShareTipWa" title="مشاركة النصيحة عبر واتساب">
+            <span>💬</span>
+            <span>مشاركة عبر واتساب</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- شريط تصنيفات سريعة تحت البطاقة -->
+      <div class="tip-quick-categories" id="tipQuickCats">
+        <span class="quick-cats-label">تصفح بحسب المنسك:</span>
+        <div class="quick-cats-chips">
+          <button class="cat-chip-btn active" data-cat="all">الكل (10)</button>
+          <button class="cat-chip-btn" data-cat="ihram">الإحرام</button>
+          <button class="cat-chip-btn" data-cat="tawaf">الطواف والسعي</button>
+          <button class="cat-chip-btn" data-cat="madinah">المسجد النبوي</button>
+          <button class="cat-chip-btn" data-cat="etiquette">الآداب والأذكار</button>
+          <button class="cat-chip-btn" data-cat="health">الصحة والسلامة</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="offers section" id="offers">
   <div class="container">
     <div class="section-head reveal">
@@ -82,15 +192,15 @@
     </div>
     <div class="offer-grid">
       <article class="lux-card featured reveal">
-        <div class="ribbon">عرض سبتمبر</div>
-        <div class="card-image image-madinah"><span>15 سبتمبر 2026</span></div>
+        <div class="ribbon">عرض سبتمبر المميز</div>
+        <div class="card-image image-madinah"><span>22 سبتمبر 2026</span></div>
         <div class="card-body">
-          <div class="card-top"><span class="label">15 يوم</span><span>أماكن محدودة</span></div>
-          <h3>رحلة 15 سبتمبر</h3>
-          <p>رحلة عمرة لمدة <strong>15 يومًا</strong>، مباشرة مع الخطوط السعودية من مطار وهران إلى المدينة المنورة.</p>
+          <div class="card-top"><span class="label">22 يوم</span><span>برنامج ممتد</span></div>
+          <h3>رحلة 22 سبتمبر</h3>
+          <p>رحلة عمرة مميزة لمدة <strong>22 يومًا</strong>، مباشرة مع الخطوط السعودية من مطار وهران إلى المدينة المنورة.</p>
           <div class="features"><span>✈ مباشرة</span><span>📍 وهران → المدينة</span></div>
-          <div class="card-footer"><div><small>السعر</small><strong>ابتداءً من 149,000 دج</strong></div>
-          <a class="whatsapp-offer" data-offer="رحلة 15 سبتمبر 2026 - عمرة 15 يوم - مباشرة من وهران إلى المدينة" href="#">استفسر <span>←</span></a></div>
+          <div class="card-footer"><div><small>السعر</small><strong>ابتداءً من 198,000 دج</strong></div>
+          <a class="whatsapp-offer" data-offer="رحلة 22 سبتمبر 2026 - عمرة 22 يوم - مباشرة من وهران إلى المدينة - ابتداءً من 198,000 دج" href="#">استفسر <span>←</span></a></div>
         </div>
       </article>
 
@@ -99,7 +209,7 @@
         <div class="card-image image-makkah"><span>22 سبتمبر 2026</span></div>
         <div class="card-body">
           <div class="card-top"><span class="label">15 يوم</span><span>أماكن جد محدودة</span></div>
-          <h3>رحلة 22 سبتمبر</h3>
+          <h3>رحلة 22 سبتمبر (15 يوم)</h3>
           <p>رحلة عمرة لمدة <strong>15 يومًا</strong>، مباشرة مع الخطوط السعودية من مطار وهران إلى المدينة المنورة.</p>
           <div class="features"><span>✈ الخطوط السعودية</span><span>📍 وهران → المدينة</span></div>
           <div class="card-footer"><div><small>السعر</small><strong>ابتداءً من 149,000 دج</strong></div>
@@ -124,10 +234,10 @@
         <div class="card-body">
           <div class="card-top"><span class="label">سبتمبر 2026</span><span>تخفيضات استثنائية</span></div>
           <h3>الأماكن المتبقية</h3>
-          <p>تخفيضات مميزة واستثنائية على رحلتي <strong>15 و22 سبتمبر</strong>، والعدد محدود.</p>
+          <p>تخفيضات مميزة واستثنائية على رحلات <strong>22 سبتمبر (برنامج 15 و22 يومًا)</strong>، والعدد محدود.</p>
           <div class="features"><span>✈ الخطوط السعودية</span><span>📍 مطار وهران → المدينة</span></div>
           <div class="card-footer"><div><small>ابتداءً من</small><strong>149,000 دج</strong></div>
-          <a class="whatsapp-offer" data-offer="التخفيضات الاستثنائية لرحلتي 15 و22 سبتمبر 2026" href="#">استفسر الآن <span>←</span></a></div>
+          <a class="whatsapp-offer" data-offer="التخفيضات الاستثنائية لرحلات 22 سبتمبر 2026 (15 و22 يوماً)" href="#">استفسر الآن <span>←</span></a></div>
         </div>
       </article>
     </div>
@@ -192,6 +302,408 @@
   </div>
 </section>
 
+<section class="section calculator-section" id="calculator">
+  <div class="container">
+    <div class="section-head centered reveal">
+      <span class="section-kicker">شفافية الميزانية والتخطيط</span>
+      <h2>حاسبة تكلفة العمرة التقديرية</h2>
+      <p>حدد خيارات الفندق، موعد السفر، وعدد أفراد أسرتك لمعرفة التكلفة الإجمالية التقديرية لرحلتكم مع تفصيل شامل لكل بند قبل تأكيد الحجز.</p>
+    </div>
+
+    <div class="calculator-wrapper reveal" id="calculatorWrapper">
+      <!-- Form Controls Column -->
+      <div class="calc-form-card" id="calcFormCard">
+        <form id="umrahCalcForm" onsubmit="return false;">
+          
+          <!-- Step 1: Trip Date -->
+          <div class="calc-group" id="groupTripDate">
+            <label class="calc-label" for="calcTripDate">
+              <span class="label-step">1</span>
+              <span>موعد وتاريخ الرحلة (رحلات مباشرة من وهران)</span>
+            </label>
+            <div class="select-wrapper">
+              <select id="calcTripDate" class="calc-select">
+                <option value="sep_22_22d" data-duration="22">رحلة 22 سبتمبر 2026 — 22 يوم (برنامج ممتد - ابتداءً من 198,000 دج)</option>
+                <option value="sep_22" data-duration="15">رحلة 22 سبتمبر 2026 — 15 يوم (رحلة مباشرة)</option>
+                <option value="oct_06" data-duration="15" selected>رحلة 06 أكتوبر 2026 — 15 يوم (موسم أكتوبر)</option>
+                <option value="oct_13" data-duration="15">رحلة 13 أكتوبر 2026 — 15 يوم (موسم أكتوبر)</option>
+                <option value="oct_20" data-duration="15">رحلة 20 أكتوبر 2026 — 15 يوم (موسم أكتوبر)</option>
+                <option value="oct_27" data-duration="15">رحلة 27 أكتوبر 2026 — 15 يوم (موسم أكتوبر)</option>
+                <option value="custom_21" data-duration="21">رحلة ممتدة — 21 يوماً (+35,000 دج للفرد)</option>
+                <option value="custom_30" data-duration="30">رحلة شهر كامل — 30 يوماً (+65,000 دج للفرد)</option>
+              </select>
+            </div>
+            <span class="field-hint">الرحلات على متن الخطوط الجوية السعودية مباشرة من مطار وهران أحمد بن بلة.</span>
+          </div>
+
+          <!-- Step 2: Hotel Package -->
+          <div class="calc-group" id="groupHotel">
+            <label class="calc-label" for="calcHotelSelect">
+              <span class="label-step">2</span>
+              <span>اختيار الفندق ومستوى الإقامة</span>
+            </label>
+            <div class="select-wrapper">
+              <select id="calcHotelSelect" class="calc-select">
+                <optgroup label="البرنامج الأول — فنادق الحرم وأجياد ومحبس الجن">
+                  <option value="nasamat" selected>فندق نسمات الخير / يافوتة — محبس الجن بالنقل المجاني 24/24</option>
+                  <option value="luluat_safa">فندق لؤلؤة الصفا / صلاح أجياد — 650 متر مشياً</option>
+                  <option value="rawabi_zamzam">فندق روابي زمزم — 300 متر مشياً من ساحة الحرم</option>
+                  <option value="meeqat_ajyad">فندق ميقات أجياد 250م / ماسة جراند 450م — ★★★★ 4 نجوم فاخر</option>
+                </optgroup>
+                <optgroup label="البرنامج الثاني — شارع غزة">
+                  <option value="safat">فندق الصافات — 1500م شارع غزة (حافلات ترددية)</option>
+                  <option value="jazira">فندق الجزيرة — 750م شارع غزة مشياً</option>
+                  <option value="manarat_ghaza">فندق منارات غزة (أراتك سابقًا) — شارع غزة قريب</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="hotel-info-tag" id="hotelSelectedInfo">
+              <span class="hotel-badge" id="hotelBadgeText">محبس الجن بالنقل</span>
+              <span class="hotel-details" id="hotelDetailsText">حافلات نقل حديثة ترددية على مدار 24 ساعة بدون انقطاع إلى ساحة الحرم.</span>
+            </div>
+          </div>
+
+          <!-- Step 3: Room Type -->
+          <div class="calc-group" id="groupRoomType">
+            <label class="calc-label">
+              <span class="label-step">3</span>
+              <span>نوع الغرفة ونظام التسكين</span>
+            </label>
+            <div class="room-options-grid" id="roomOptionsGrid" role="radiogroup">
+              <label class="room-option-label" id="lblRoom5">
+                <input type="radio" name="calcRoomType" value="room5" id="optRoom5">
+                <div class="room-option-box">
+                  <span class="room-icon">👥👥👤</span>
+                  <strong class="room-name">خماسية</strong>
+                  <span class="room-sub">5 أسرة — اقتصادي</span>
+                  <span class="room-price-tag" id="priceTagRoom5">178,000 دج</span>
+                </div>
+              </label>
+              
+              <label class="room-option-label active" id="lblRoom4">
+                <input type="radio" name="calcRoomType" value="room4" id="optRoom4" checked>
+                <div class="room-option-box">
+                  <span class="room-icon">👥👥</span>
+                  <strong class="room-name">رباعية</strong>
+                  <span class="room-sub">4 أسرة — الأكثر طلباً</span>
+                  <span class="room-price-tag" id="priceTagRoom4">188,000 دج</span>
+                </div>
+              </label>
+
+              <label class="room-option-label" id="lblRoom3">
+                <input type="radio" name="calcRoomType" value="room3" id="optRoom3">
+                <div class="room-option-box">
+                  <span class="room-icon">👥👤</span>
+                  <strong class="room-name">ثلاثية</strong>
+                  <span class="room-sub">3 أسرة — راحة إضافية</span>
+                  <span class="room-price-tag" id="priceTagRoom3">198,000 دج</span>
+                </div>
+              </label>
+
+              <label class="room-option-label" id="lblRoom2">
+                <input type="radio" name="calcRoomType" value="room2" id="optRoom2">
+                <div class="room-option-box">
+                  <span class="room-icon">👤👤</span>
+                  <strong class="room-name">ثنائية (VIP)</strong>
+                  <span class="room-sub">سريران — خصوصية تامة</span>
+                  <span class="room-price-tag" id="priceTagRoom2">218,000 دج</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Step 4: Travelers Count -->
+          <div class="calc-group" id="groupTravelers">
+            <label class="calc-label">
+              <span class="label-step">4</span>
+              <span>عدد المسافرين وتكوين الوفد</span>
+            </label>
+            <div class="travelers-counters-grid">
+              <!-- Adults -->
+              <div class="counter-card" id="counterCardAdults">
+                <div class="counter-header">
+                  <strong>البالغون (12+ سنة)</strong>
+                  <small id="adultCostNote">بسعر الغرفة المختارة</small>
+                </div>
+                <div class="counter-controls">
+                  <button type="button" class="btn-qty" id="btnAdultMinus" aria-label="تقليل عدد البالغين">−</button>
+                  <input type="number" id="inputAdults" min="1" max="20" value="2" readonly aria-label="عدد البالغين">
+                  <button type="button" class="btn-qty" id="btnAdultPlus" aria-label="زيادة عدد البالغين">+</button>
+                </div>
+              </div>
+
+              <!-- Children -->
+              <div class="counter-card" id="counterCardChildren">
+                <div class="counter-header">
+                  <strong>الأطفال (2 - 11 سنة)</strong>
+                  <small>145,000 دج (تأشيرة ومقعد طيران)</small>
+                </div>
+                <div class="counter-controls">
+                  <button type="button" class="btn-qty" id="btnChildMinus" aria-label="تقليل عدد الأطفال">−</button>
+                  <input type="number" id="inputChildren" min="0" max="10" value="0" readonly aria-label="عدد الأطفال">
+                  <button type="button" class="btn-qty" id="btnChildPlus" aria-label="زيادة عدد الأطفال">+</button>
+                </div>
+              </div>
+
+              <!-- Infants -->
+              <div class="counter-card" id="counterCardInfants">
+                <div class="counter-header">
+                  <strong>الرضع (أقل من سنتين)</strong>
+                  <small>75,000 دج (تأشيرة ورسوم مطار)</small>
+                </div>
+                <div class="counter-controls">
+                  <button type="button" class="btn-qty" id="btnInfantMinus" aria-label="تقليل عدد الرضع">−</button>
+                  <input type="number" id="inputInfants" min="0" max="5" value="0" readonly aria-label="عدد الرضع">
+                  <button type="button" class="btn-qty" id="btnInfantPlus" aria-label="زيادة عدد الرضع">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 5: Meals & Add-ons -->
+          <div class="calc-group" id="groupAddons">
+            <label class="calc-label">
+              <span class="label-step">5</span>
+              <span>خدمات إضافية وتفضيلات الإطعام</span>
+            </label>
+            <div class="addons-list">
+              <label class="addon-checkbox-row" id="lblAddonMeals">
+                <input type="checkbox" id="chkAddonMeals">
+                <div class="addon-text">
+                  <div class="addon-title-row">
+                    <strong>إضافة وجبتي الإفطار والعشاء (بوفيه مفتوح)</strong>
+                    <span class="addon-price">+28,000 دج للشخص</span>
+                  </div>
+                  <p>بوفيه متنوع يومي في مطعم الفندق طوال مدة الإقامة بمكة المكرمة والمدينة المنورة.</p>
+                </div>
+              </label>
+
+              <div class="included-feature-row">
+                <span class="check-icon">✓</span>
+                <div>
+                  <strong>جولات المزارات الدينية المشتركة في مكة والمدينة</strong>
+                  <p>مشمولة مجاناً بحافلات سياحية حديثة ومرافقة مرشد ديني متخصص.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- Live Budget Summary Column -->
+      <div class="calc-summary-card" id="calcSummaryCard">
+        <div class="summary-card-inner">
+          <div class="summary-top-bar">
+            <span class="summary-badge">الميزانية المتوقعة للرحلة</span>
+            <button type="button" class="btn-reset-calc" id="btnResetCalc" title="إعادة تعيين الخيارات">↺ إعادة الضبط</button>
+          </div>
+
+          <div class="summary-total-display">
+            <span class="total-caption">التكلفة التقديرية الإجمالية:</span>
+            <div class="total-amount-row">
+              <span class="total-figure" id="totalBudgetFigure">376,000</span>
+              <span class="total-currency">دج جزائري</span>
+            </div>
+            <div class="per-adult-line" id="perAdultLine">
+              (ما يعادل <strong id="perPersonFigure">188,000</strong> دج للفرد البالغ)
+            </div>
+          </div>
+
+          <!-- Breakdown list -->
+          <div class="summary-breakdown" id="summaryBreakdown">
+            <h4 class="breakdown-title">تفصيل بنود الميزانية:</h4>
+            
+            <div class="breakdown-row" id="rowAdultsBreakdown">
+              <span class="b-desc" id="bAdultsDesc">البالغون (2 شخص × رباعية):</span>
+              <span class="b-val" id="bAdultsVal">376,000 دج</span>
+            </div>
+
+            <div class="breakdown-row" id="rowChildrenBreakdown" style="display: none;">
+              <span class="b-desc" id="bChildrenDesc">الأطفال (0):</span>
+              <span class="b-val" id="bChildrenVal">0 دج</span>
+            </div>
+
+            <div class="breakdown-row" id="rowInfantsBreakdown" style="display: none;">
+              <span class="b-desc" id="bInfantsDesc">الرضع (0):</span>
+              <span class="b-val" id="bInfantsVal">0 دج</span>
+            </div>
+
+            <div class="breakdown-row" id="rowMealsBreakdown" style="display: none;">
+              <span class="b-desc" id="bMealsDesc">الإفطار والعشاء:</span>
+              <span class="b-val" id="bMealsVal">0 دج</span>
+            </div>
+
+            <div class="breakdown-row" id="rowDurationBreakdown" style="display: none;">
+              <span class="b-desc" id="bDurationDesc">تمديد مدة الإقامة:</span>
+              <span class="b-val" id="bDurationVal">0 دج</span>
+            </div>
+          </div>
+
+          <!-- Included in package list -->
+          <div class="package-includes-box">
+            <h5>ما تشمله هذه الميزانية مع وكالة هالة:</h5>
+            <ul class="includes-list">
+              <li><span>✓</span> تذكرة طيران مباشرة ذهاباً وإياباً (وهران — جدة / المدينة)</li>
+              <li><span>✓</span> التأشيرة الإلكترونية مع التأمين الصحي المعتمد</li>
+              <li><span>✓</span> الإقامة الفندقية المختارة بمكة والمدينة المنورة</li>
+              <li><span>✓</span> النقل الكامل بحافلات مكيفة حديثة</li>
+              <li><span>✓</span> الإرشاد الديني والمرافقة الميدانية 24/7</li>
+              <li><span>✓</span> هدايا المعتمر (حقيبة، مصحف، مظلة، وماء زمزم)</li>
+            </ul>
+          </div>
+
+          <!-- Actions -->
+          <div class="summary-actions">
+            <button type="button" class="btn gold full-btn" id="btnBookWithEstimate">
+              💬 طلب حجز أولي بهذه الميزانية عبر واتساب
+            </button>
+            <button type="button" class="btn glass-dark full-btn" id="btnPrintEstimate">
+              🖨️ طباعة / حفظ عرض السعر
+            </button>
+          </div>
+
+          <p class="summary-disclaimer">
+            * هذه التكلفة تقديرية استرشادية مبنية على باقات موسم 2026 الرسمية لوكالة هالة، ويتم تثبيت السعر النهائي وتأكيد توافر الغرف فور إتمام إجراءات التسجيل مع مستشار الوكالة.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section checklist-section" id="checklist">
+  <div class="container">
+    <div class="section-head centered reveal">
+      <span class="section-kicker">دليل المعتمر التفاعلي</span>
+      <h2>قائمة تجهيز حقيبة العمرة</h2>
+      <p>حضّر أمتعتك ووثائقك خطوة بخطوة بكل طمأنينة. يمكنك تحديد ما تم تجهيزه وحفظ تقدمك تلقائياً للرجوع إليه لاحقاً.</p>
+    </div>
+
+    <div class="checklist-card reveal" id="checklistCard">
+      <!-- Progress Bar & Summary Header -->
+      <div class="checklist-header" id="checklistHeader">
+        <div class="checklist-summary">
+          <div class="checklist-progress-text">
+            <span class="checklist-badge" id="checklistBadge">قيد التجهيز</span>
+            <h3 id="checklistStatsTitle">تم إنجاز <span id="completedCount">0</span> من <span id="totalCount">0</span> بند</h3>
+            <p class="checklist-status-note" id="checklistStatusNote">حدد الأغراض المجهزة لتتبع استعدادك للرحلة</p>
+          </div>
+          <div class="checklist-progress-percent" id="checklistProgressPercent">
+            <span id="percentText">0%</span>
+            <small>نسبة الجاهزية</small>
+          </div>
+        </div>
+        <div class="progress-bar-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBarTrack">
+          <div class="progress-bar-fill" id="progressBarFill" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <!-- Controls & Filter Tabs -->
+      <div class="checklist-toolbar" id="checklistToolbar">
+        <div class="checklist-tabs" id="checklistTabs" role="tablist">
+          <button type="button" class="check-tab active" data-filter="all" id="tabAll">الكل (<span id="countAll">0</span>)</button>
+          <button type="button" class="check-tab" data-filter="documents" id="tabDocs">الوثائق الرسمية</button>
+          <button type="button" class="check-tab" data-filter="ihram" id="tabIhram">لباس الإحرام والملابس</button>
+          <button type="button" class="check-tab" data-filter="health" id="tabHealth">الصحة والنظافة</button>
+          <button type="button" class="check-tab" data-filter="spiritual" id="tabSpiritual">أدعية ومستلزمات</button>
+          <button type="button" class="check-tab" data-filter="custom" id="tabCustom">أغراضي الخاصة</button>
+        </div>
+
+        <div class="checklist-actions-top" id="checklistActionsTop">
+          <button type="button" class="btn-tool" id="btnResetChecklist" title="إعادة تعيين القائمة">↺ إعادة ضبط</button>
+          <button type="button" class="btn-tool" id="btnPrintChecklist" title="طباعة القائمة">🖨️ طباعة</button>
+          <button type="button" class="btn-tool gold-tool" id="btnShareWhatsapp" title="مشاركة القائمة عبر واتساب">💬 إرسال للمستشار</button>
+        </div>
+      </div>
+
+      <!-- Items List Container -->
+      <div class="checklist-items-grid" id="checklistItemsList">
+        <!-- Rendered dynamically by script.js -->
+      </div>
+
+      <!-- Add Custom Item Form -->
+      <div class="add-item-box" id="addItemBox">
+        <form id="addItemForm" class="add-item-form">
+          <span class="add-item-icon">＋</span>
+          <input type="text" id="customItemInput" placeholder="أضف غرضاً إضافياً لقائمتك (مثال: شاحن محمول، نظارة شمسية...)" maxlength="80" required>
+          <select id="customItemCategory" aria-label="فئة الغرض">
+            <option value="custom">أغراضي الخاصة</option>
+            <option value="documents">الوثائق الرسمية</option>
+            <option value="ihram">لباس الإحرام والملابس</option>
+            <option value="health">الصحة والنظافة</option>
+            <option value="spiritual">أدعية ومستلزمات</option>
+          </select>
+          <button type="submit" class="btn gold" id="btnAddItem">إضافة للقائمة</button>
+        </form>
+      </div>
+
+      <!-- Completion Banner when 100% -->
+      <div class="checklist-completion-banner" id="completionBanner" style="display: none;">
+        <div class="completion-icon">🕋✨</div>
+        <h4>هنيئاً لكم! حقيبتكم جاهزة لرحلة العمرة المباركة</h4>
+        <p>فريق هالة للسياحة والأسفار يتمنى لكم سفراً ميسراً وعمرة مقبولة وذنباً مغفوراً بإذن الله.</p>
+        <a href="#contact" class="btn gold" id="checklistContactBtn">تأكيد تفاصيل الانطلاق مع الوكالة <span>←</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section landmarks-section" id="landmarks">
+  <div class="container">
+    <div class="section-head centered reveal">
+      <span class="section-kicker">دليل الزيارات النبوية والمشاعر المقدسة</span>
+      <h2>مزارات مكة المكرمة والمدينة المنورة</h2>
+      <p>اكتشف أبرز المعالم الإسلامية والتاريخية في رحلتكم المباركة. يمكنك تخصيص خطة زياراتك، وتحديد المزارات المفضلة، ومشاركتها مع مرافقيك ومرشد الوكالة.</p>
+    </div>
+
+    <!-- Landmarks Control Bar -->
+    <div class="landmarks-control-card reveal" id="landmarksControlCard">
+      <div class="landmarks-filters-row">
+        <!-- City & Plan Tabs -->
+        <div class="landmark-tabs" id="landmarkTabs" role="tablist">
+          <button type="button" class="l-tab active" data-city="all" id="tabLmAll">
+            <span>الكل</span> <span class="tab-count" id="countLmAll">12</span>
+          </button>
+          <button type="button" class="l-tab" data-city="makkah" id="tabLmMakkah">
+            <span>🕋 مكة المكرمة</span> <span class="tab-count" id="countLmMakkah">6</span>
+          </button>
+          <button type="button" class="l-tab" data-city="madinah" id="tabLmMadinah">
+            <span>🕌 المدينة المنورة</span> <span class="tab-count" id="countLmMadinah">6</span>
+          </button>
+          <button type="button" class="l-tab plan-tab" data-city="planned" id="tabLmPlanned">
+            <span>⭐ خطتي المجدولة</span> <span class="tab-count" id="countLmPlanned">0</span>
+          </button>
+        </div>
+
+        <!-- Quick Search -->
+        <div class="landmark-search-box" id="landmarkSearchBox">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="landmarkSearchInput" placeholder="ابحث عن مزار (مثال: قباء، حراء، أحد...)" aria-label="البحث في المزارات">
+          <button type="button" id="clearLmSearch" class="clear-search-btn" title="مسح البحث" style="display: none;">✕</button>
+        </div>
+      </div>
+
+      <!-- Plan Summary Bar -->
+      <div class="plan-summary-strip" id="planSummaryStrip">
+        <div class="plan-info">
+          <span class="plan-badge" id="planBadge">الخطة الشخصية</span>
+          <span class="plan-text" id="planText">قم بالضغط على «أضف للخطة» في أي مزار لتجهيز جدول زياراتك الخاص.</span>
+        </div>
+        <div class="plan-actions" id="planActions">
+          <button type="button" class="btn-tool" id="btnClearPlan" title="مسح المزارات المحددة">↺ تفريغ الخطة</button>
+          <button type="button" class="btn-tool gold-tool" id="btnSharePlanWhatsapp">💬 مشاركة خطتي مع الوكالة</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Landmarks Grid -->
+    <div class="landmarks-grid" id="landmarksGrid">
+      <!-- Injected dynamically by script.js -->
+    </div>
+  </div>
+</section>
+
 <section class="why section" id="why">
   <div class="container experience-grid">
     <div class="experience-art reveal">
@@ -239,7 +751,7 @@
 <footer class="footer">
   <div class="container footer-grid">
     <div class="footer-brand"><a class="brand" href="#home"><span class="brand-mark">ه</span><span><strong>هالة</strong><small>للسياحة والأسفار</small></span></a><p>رحلتكم تبدأ بثقة، وتبقى ذكرى جميلة.</p></div>
-    <div><h4>التنقل</h4><a href="#home">الرئيسية</a><a href="#offers">عروض العمرة</a><a href="#services">خدماتنا</a></div>
+    <div><h4>التنقل</h4><a href="#home">الرئيسية</a><a href="#offers">عروض العمرة</a><a href="#october-prices">أسعار أكتوبر</a><a href="#calculator">حاسبة التكلفة</a><a href="#checklist">حقيبة المعتمر</a><a href="#landmarks">المزارات الدينية</a><a href="#services">خدماتنا</a></div>
     <div><h4>تواصل معنا</h4><a id="footerPhone" href="tel:+213561935285">+213 561 935 285</a><a href="mailto:contact@hala-voyage.dz">contact@hala-voyage.dz</a></div>
   </div>
   <div class="copyright">© <span id="year"></span> هالة للسياحة والأسفار — جميع الحقوق محفوظة</div>
@@ -247,6 +759,53 @@
 
 <a class="wa" id="floatingWhatsapp" href="#" aria-label="واتساب">◉</a>
 <button class="top" id="backTop" aria-label="أعلى">↑</button>
+
+<!-- زر التبويب الجانبي العائم لنصيحة اليوم -->
+<button class="side-tip-tab" id="sideTipTab" aria-label="فتح دليل نصائح المعتمر" title="نصيحة اليوم للمعتمر">
+  <span class="tip-tab-icon">💡</span>
+  <span class="tip-tab-text">نصيحة اليوم</span>
+  <span class="tip-tab-dot"></span>
+</button>
+
+<!-- الشريط الجانبي المنزلق (Drawer) لنصائح وأدعية المعتمر -->
+<div class="tip-drawer-overlay" id="tipDrawerOverlay"></div>
+<aside class="tip-drawer" id="tipDrawer" aria-label="دليل نصائح وأذكار المعتمر" aria-hidden="true">
+  <div class="tip-drawer-header">
+    <div class="tip-drawer-branding">
+      <span class="drawer-header-icon">🕋</span>
+      <div>
+        <h3>دليل نصائح المعتمر</h3>
+        <small>زاد الروح والمعرفة لرحلة مباركة</small>
+      </div>
+    </div>
+    <button class="tip-drawer-close" id="tipDrawerClose" aria-label="إغلاق الشريط الجانبي">✕</button>
+  </div>
+
+  <div class="tip-drawer-filter">
+    <button class="drawer-filter-btn active" data-filter="all">الكل (<span id="drawerCountAll">10</span>)</button>
+    <button class="drawer-filter-btn" data-filter="ihram">الإحرام</button>
+    <button class="drawer-filter-btn" data-filter="tawaf">الطواف والسعي</button>
+    <button class="drawer-filter-btn" data-filter="madinah">المسجد النبوي</button>
+    <button class="drawer-filter-btn" data-filter="etiquette">الآداب والأذكار</button>
+    <button class="drawer-filter-btn" data-filter="health">الصحة والسلامة</button>
+    <button class="drawer-filter-btn" data-filter="favorites">⭐ المفضلة (<span id="drawerCountFav">0</span>)</button>
+  </div>
+
+  <div class="tip-drawer-list" id="tipDrawerList">
+    <!-- قائمة النصائح تتولد برمجياً عبر script.js -->
+  </div>
+
+  <div class="tip-drawer-footer">
+    <div class="drawer-footer-text">
+      <span>عمرة مقبولة وذنباً مغفوراً بإذن الله</span>
+      <small>وكالة هالة للسياحة والأسفار والعمرة</small>
+    </div>
+    <a href="#calculator" class="drawer-cta-btn" id="drawerCalcLink">
+      <span>احسب تكلفة عمرتك</span> <span>←</span>
+    </a>
+  </div>
+</aside>
+
 <script src="script.js"></script>
 </body>
 </html>
