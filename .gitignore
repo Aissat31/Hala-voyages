@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+package-lock.json
+bun.lock
+
+# Cloudflare & Wrangler
+.wrangler/
+.mf/
+.tmp/
+wrangler.log
+
+# Build Output (built by CI)
+dist/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Operating System
+.DS_Store
+Thumbs.db
