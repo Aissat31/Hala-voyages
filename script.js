@@ -4,8 +4,34 @@ const PHONE_NUMBER = "+213561935285";    // استبدل هذا الرقم بر�
 
 const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
-menuToggle?.addEventListener("click", () => navLinks.classList.toggle("open"));
-document.querySelectorAll(".nav-links a").forEach(a => a.addEventListener("click", () => navLinks.classList.remove("open")));
+const navOverlay = document.getElementById("navOverlay");
+const mobileNavClose = document.getElementById("mobileNavClose");
+
+function openMobileNav() {
+  navLinks?.classList.add("open");
+  navOverlay?.classList.add("open");
+  menuToggle?.setAttribute("aria-expanded", "true");
+  document.body.classList.add("menu-open");
+}
+
+function closeMobileNav() {
+  navLinks?.classList.remove("open");
+  navOverlay?.classList.remove("open");
+  menuToggle?.setAttribute("aria-expanded", "false");
+  document.body.classList.remove("menu-open");
+}
+
+menuToggle?.addEventListener("click", () => {
+  if (navLinks?.classList.contains("open")) {
+    closeMobileNav();
+  } else {
+    openMobileNav();
+  }
+});
+
+navOverlay?.addEventListener("click", closeMobileNav);
+mobileNavClose?.addEventListener("click", closeMobileNav);
+document.querySelectorAll(".nav-links a").forEach(a => a.addEventListener("click", closeMobileNav));
 
 const whatsappUrl = (text) => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
 const defaultMessage = "السلام عليكم، أريد الاستفسار عن عروض العمرة لدى وكالة هالة للسياحة والأسفار.";
@@ -36,12 +62,16 @@ document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 
 const sections = document.querySelectorAll("main section[id]");
 const navItems = document.querySelectorAll(".nav-links a");
+const mobileBarItems = document.querySelectorAll(".mobile-bar-item:not(button)");
 window.addEventListener("scroll", () => {
   let current = "home";
   sections.forEach(section => {
     if (window.scrollY >= section.offsetTop - 180) current = section.id;
   });
   navItems.forEach(a => a.classList.toggle("active", a.getAttribute("href") === `#${current}`));
+  mobileBarItems.forEach(item => {
+    item.classList.toggle("active", item.getAttribute("href") === `#${current}`);
+  });
 });
 
 // ================= قائمة تجهيز حقيبة العمرة التفاعلية =================
@@ -830,12 +860,11 @@ const DATES_DATA = {
   sep_22_22d: { label: "22 سبتمبر 2026 (22 يوماً)", durationText: "22 يوماً (برنامج ممتد - ابتداءً من 198,000 دج)", extra: 20000 },
   sep_15: { label: "22 سبتمبر 2026 (22 يوماً)", durationText: "22 يوماً (برنامج ممتد)", extra: 20000 },
   sep_22: { label: "22 سبتمبر 2026", durationText: "15 يوماً (رحلة مباشرة)", extra: 0 },
+  sep_29: { label: "29 سبتمبر 2026", durationText: "15 يوماً (ابتداءً من 160,000 دج)", extra: 0 },
   oct_06: { label: "06 أكتوبر 2026", durationText: "15 يوماً (موسم أكتوبر)", extra: 0 },
   oct_13: { label: "13 أكتوبر 2026", durationText: "15 يوماً (موسم أكتوبر)", extra: 0 },
   oct_20: { label: "20 أكتوبر 2026", durationText: "15 يوماً (موسم أكتوبر)", extra: 0 },
-  oct_27: { label: "27 أكتوبر 2026", durationText: "15 يوماً (موسم أكتوبر)", extra: 0 },
-  custom_21: { label: "رحلة ممتدة (21 يوماً)", durationText: "21 يوماً", extra: 35000 },
-  custom_30: { label: "رحلة شهر كامل (30 يوماً)", durationText: "30 يوماً", extra: 65000 }
+  oct_27: { label: "27 أكتوبر 2026", durationText: "15 يوماً (موسم أكتوبر)", extra: 0 }
 };
 
 const ROOM_NAMES = {
@@ -1557,6 +1586,7 @@ function initUmrahTipsFeature() {
 
   sideTipTab?.addEventListener("click", openDrawer);
   btnOpenDrawerFromSection?.addEventListener("click", openDrawer);
+  document.getElementById("mBarTips")?.addEventListener("click", openDrawer);
   tipDrawerClose?.addEventListener("click", closeDrawer);
   tipDrawerOverlay?.addEventListener("click", closeDrawer);
 

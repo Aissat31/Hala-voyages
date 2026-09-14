@@ -25,7 +25,12 @@
       <span><strong>هالة</strong><small>للسياحة والأسفار</small></span>
     </a>
     <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة"><i></i><i></i><i></i></button>
+    <div class="nav-overlay" id="navOverlay"></div>
     <nav class="nav-links" id="navLinks">
+      <div class="mobile-nav-header">
+        <span>قائمة التصفح</span>
+        <button class="mobile-nav-close" id="mobileNavClose" aria-label="إغلاق القائمة">✕</button>
+      </div>
       <a class="active" href="#home">الرئيسية</a>
       <a href="#dailyTip">نصيحة اليوم</a>
       <a href="#offers">العمرة</a>
@@ -36,6 +41,10 @@
       <a href="#services">خدماتنا</a>
       <a href="#why">لماذا هالة؟</a>
       <a href="#contact">تواصل معنا</a>
+      <div class="mobile-nav-actions">
+        <a class="btn gold full-btn" href="#offers">استكشف باقات العمرة <span>←</span></a>
+        <a class="btn glass-dark full-btn" href="tel:+213561935285">📞 اتصال مباشر بالوكالة</a>
+      </div>
     </nav>
     <a class="nav-btn" href="#offers">استكشف الرحلات <span>←</span></a>
   </div>
@@ -229,15 +238,28 @@
         </div>
       </article>
 
+      <article class="lux-card featured reveal">
+        <div class="ribbon">عرض سبتمبر الجديد</div>
+        <div class="card-image image-madinah"><span>29 سبتمبر 2026</span></div>
+        <div class="card-body">
+          <div class="card-top"><span class="label">15 يوم</span><span>رحلة مباشرة</span></div>
+          <h3>رحلة 29 سبتمبر</h3>
+          <p>رحلة عمرة مميزة لمدة <strong>15 يومًا</strong>، مباشرة مع الخطوط السعودية من مطار وهران إلى المدينة المنورة بأسعار تنافسية.</p>
+          <div class="features"><span>✈ الخطوط السعودية</span><span>📍 وهران → المدينة</span></div>
+          <div class="card-footer"><div><small>السعر</small><strong>ابتداءً من 160,000 دج</strong></div>
+          <a class="whatsapp-offer" data-offer="رحلة 29 سبتمبر 2026 - عمرة 15 يوم - مباشرة من وهران إلى المدينة - ابتداءً من 160,000 دج" href="#">احجز الآن <span>←</span></a></div>
+        </div>
+      </article>
+
       <article class="lux-card reveal">
-        <div class="card-image image-madinah"><span>عرض خاص</span></div>
+        <div class="card-image image-night"><span>عرض خاص</span></div>
         <div class="card-body">
           <div class="card-top"><span class="label">سبتمبر 2026</span><span>تخفيضات استثنائية</span></div>
           <h3>الأماكن المتبقية</h3>
-          <p>تخفيضات مميزة واستثنائية على رحلات <strong>22 سبتمبر (برنامج 15 و22 يومًا)</strong>، والعدد محدود.</p>
+          <p>تخفيضات مميزة واستثنائية على رحلات <strong>22 و29 سبتمبر</strong>، والعدد محدود.</p>
           <div class="features"><span>✈ الخطوط السعودية</span><span>📍 مطار وهران → المدينة</span></div>
-          <div class="card-footer"><div><small>ابتداءً من</small><strong>149,000 دج</strong></div>
-          <a class="whatsapp-offer" data-offer="التخفيضات الاستثنائية لرحلات 22 سبتمبر 2026 (15 و22 يوماً)" href="#">استفسر الآن <span>←</span></a></div>
+          <div class="card-footer"><div><small>ابتداءً من</small><strong>160,000 دج</strong></div>
+          <a class="whatsapp-offer" data-offer="التخفيضات الاستثنائية لرحلات سبتمبر 2026 (رحلة 29 سبتمبر ابتداءً من 160,000 دج)" href="#">استفسر الآن <span>←</span></a></div>
         </div>
       </article>
     </div>
@@ -325,12 +347,11 @@
               <select id="calcTripDate" class="calc-select">
                 <option value="sep_22_22d" data-duration="22">رحلة 22 سبتمبر 2026 — 22 يوم (برنامج ممتد - ابتداءً من 198,000 دج)</option>
                 <option value="sep_22" data-duration="15">رحلة 22 سبتمبر 2026 — 15 يوم (رحلة مباشرة)</option>
+                <option value="sep_29" data-duration="15">رحلة 29 سبتمبر 2026 — 15 يوم (ابتداءً من 160,000 دج)</option>
                 <option value="oct_06" data-duration="15" selected>رحلة 06 أكتوبر 2026 — 15 يوم (موسم أكتوبر)</option>
                 <option value="oct_13" data-duration="15">رحلة 13 أكتوبر 2026 — 15 يوم (موسم أكتوبر)</option>
                 <option value="oct_20" data-duration="15">رحلة 20 أكتوبر 2026 — 15 يوم (موسم أكتوبر)</option>
                 <option value="oct_27" data-duration="15">رحلة 27 أكتوبر 2026 — 15 يوم (موسم أكتوبر)</option>
-                <option value="custom_21" data-duration="21">رحلة ممتدة — 21 يوماً (+35,000 دج للفرد)</option>
-                <option value="custom_30" data-duration="30">رحلة شهر كامل — 30 يوماً (+65,000 دج للفرد)</option>
               </select>
             </div>
             <span class="field-hint">الرحلات على متن الخطوط الجوية السعودية مباشرة من مطار وهران أحمد بن بلة.</span>
@@ -757,8 +778,32 @@
   <div class="copyright">© <span id="year"></span> هالة للسياحة والأسفار — جميع الحقوق محفوظة</div>
 </footer>
 
-<a class="wa" id="floatingWhatsapp" href="#" aria-label="واتساب">◉</a>
-<button class="top" id="backTop" aria-label="أعلى">↑</button>
+<a class="wa" id="floatingWhatsapp" href="#" aria-label="تواصل معنا عبر واتساب" title="تواصل عبر واتساب"><span class="wa-icon">◉</span><span class="wa-label">تواصل عبر واتساب</span></a>
+<button class="top" id="backTop" aria-label="الرجوع إلى أعلى الصفحة">↑</button>
+
+<!-- شريط الموبايل السفلي السريع لتجربة تطبيق هاتف ممتازة -->
+<nav class="mobile-bottom-bar" id="mobileBottomBar" aria-label="شريط الوصول السريع">
+  <a href="#home" class="mobile-bar-item active" id="mBarHome">
+    <span class="m-bar-icon">🏠</span>
+    <span class="m-bar-label">الرئيسية</span>
+  </a>
+  <a href="#offers" class="mobile-bar-item" id="mBarOffers">
+    <span class="m-bar-icon">✈️</span>
+    <span class="m-bar-label">العروض</span>
+  </a>
+  <a href="#calculator" class="mobile-bar-item highlight" id="mBarCalc">
+    <span class="m-bar-icon">🧮</span>
+    <span class="m-bar-label">الحاسبة</span>
+  </a>
+  <a href="#checklist" class="mobile-bar-item" id="mBarChecklist">
+    <span class="m-bar-icon">🧳</span>
+    <span class="m-bar-label">الحقيبة</span>
+  </a>
+  <button type="button" class="mobile-bar-item" id="mBarTips">
+    <span class="m-bar-icon">💡</span>
+    <span class="m-bar-label">النصائح</span>
+  </button>
+</nav>
 
 <!-- زر التبويب الجانبي العائم لنصيحة اليوم -->
 <button class="side-tip-tab" id="sideTipTab" aria-label="فتح دليل نصائح المعتمر" title="نصيحة اليوم للمعتمر">
