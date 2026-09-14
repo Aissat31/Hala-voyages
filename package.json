@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "node server.js",
     "start": "node server.js",
-    "build": "node -e \"console.log('Build complete')\"",
+    "build": "node -e \"const fs=require('fs'); fs.mkdirSync('dist', {recursive:true}); ['index.html','style.css','script.js','logo-hala-travel.jpg','_headers','_redirects'].forEach(f => { if(fs.existsSync(f)) fs.copyFileSync(f, 'dist/' + f); }); console.log('Build complete: dist ready');\"",
     "lint": "node -e \"console.log('No lint errors')\""
   },
   "dependencies": {
