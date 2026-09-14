@@ -1,0 +1,6 @@
+{
+  "name": "هالة | للسياحة والأسفار والعمرة",
+  "description": "هالة للسياحة والأسفار والعمرة — رحلات مباشرة وبرامج عمرة من وهران",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
