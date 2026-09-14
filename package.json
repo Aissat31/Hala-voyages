@@ -6,8 +6,11 @@
   "scripts": {
     "dev": "node server.js",
     "start": "node server.js",
-    "build": "node -e \"const fs=require('fs'); fs.mkdirSync('dist', {recursive:true}); ['index.html','style.css','script.js','logo-hala-travel.jpg','_headers','_redirects'].forEach(f => { if(fs.existsSync(f)) fs.copyFileSync(f, 'dist/' + f); }); console.log('Build complete: dist ready');\"",
+    "build": "node build.js",
     "lint": "node -e \"console.log('No lint errors')\""
+  },
+  "engines": {
+    "node": ">=18.0.0"
   },
   "dependencies": {
     "express": "^4.21.2"
